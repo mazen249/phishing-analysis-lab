@@ -1,7 +1,7 @@
 # 🎣 Phishing Analysis Lab
 
 ## 📌 Overview
-This project demonstrates a complete phishing email analysis workflow. I analyzed a suspicious email (email3.eml) to identify malicious indicators and extract a hidden flag. The techniques used mirror real-world SOC analyst tasks.
+This project demonstrates a complete phishing email analysis workflow. I analyzed a suspicious email (`email3.eml`) to identify malicious indicators and extract a hidden flag. The techniques used mirror real-world SOC analyst tasks.
 
 ## 🛠️ Tools Used
 | Tool | Purpose |
@@ -20,7 +20,7 @@ This project demonstrates a complete phishing email analysis workflow. I analyze
   - `X-Originating-IP:` – original IP
   - `Authentication-Results:` – SPF/DKIM/DMARC status
 
-**📸 Screenshot:** Raw email source with annotated fields.
+📸 **Screenshot:** Raw email source with annotated fields.
 
 ### 2. Suspicious Indicators
 - **Spoofed From address** – mismatch with `Return-Path`
@@ -33,13 +33,13 @@ This project demonstrates a complete phishing email analysis workflow. I analyze
 - Used CyberChef (`From Base64` operation) to decode
 - Saved as `flag.pdf`
 
-**📸 Screenshot:** CyberChef decoding result.
+📸 **Screenshot:** CyberChef decoding result.
 
 ### 4. Recovering the Flag
 - Opened `flag.pdf`
 - Found hidden flag: `THM{...}`
 
-**📸 Screenshot:** Flag displayed in PDF.
+📸 **Screenshot:** Flag displayed in PDF.
 
 ## 📊 Indicators of Compromise (IOCs)
 | Type | Value |
@@ -74,17 +74,12 @@ This project demonstrates a complete phishing email analysis workflow. I analyze
 
 ---
 
-## 📸 **لقطات الشاشة (تضعها في مجلد `screenshots/`)**
+## 📸 Screenshots
 
-| اسم الملف | المحتوى |
-|-----------|---------|
-| `01-raw-email-source.png` | المصدر الخام للبريد |
-| `02-email-header-fields.png` | إبراز حقول مهمة (Return-Path, X-Originating-IP) |
-| `03-cyberchef-base64-decode.png` | فك تشفير Base64 في CyberChef |
-| `04-pdf-flag.png` | الـ flag داخل الـ PDF |
-| `05-iocs-summary.png` | ملخص مؤشرات الاختراق |
-
----
-## 💡 **نصيحة إضافية**
-
-- **إذا كنت لا تريد نشر البريد الأصلي** (لأسباب أخلاقية)، يمكنك فقط تضمين لقطات
+| Filename | Content |
+|----------|---------|
+| `01-raw-email-source.png` | Raw email source |
+| `02-email-header-fields.png` | Key fields (Return-Path, X-Originating-IP) |
+| `03-cyberchef-base64-decode.png` | CyberChef Base64 decoding |
+| `04-pdf-flag.png` | Hidden flag inside PDF |
+| `05-iocs-summary.png` | Summary of IOCs |
